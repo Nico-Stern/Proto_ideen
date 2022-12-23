@@ -20,7 +20,7 @@ public class player2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical = Input.GetAxis("Vertical");
+        vertical = Input.GetAxisRaw("Vertical");
         Vector2 moveH = vertical * Vector2.up * Speed * Time.deltaTime;
         transform.Translate(moveH);
 
@@ -31,11 +31,7 @@ public class player2 : MonoBehaviour
 
         Vector2 positionH = transform.position;
         positionH.x = Mathf.Clamp(positionH.x, linkeGrenze, rechteGrenze);
-        transform.position = positionH;
-        
-
-        
+        transform.position = positionH;                
     }
-
     
 }

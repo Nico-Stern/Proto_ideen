@@ -20,7 +20,7 @@ public class Move2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal");
         Vector2 moveH = horizontal * Vector2.right * Speed * Time.deltaTime;
         transform.Translate(moveH);
 
