@@ -6,6 +6,12 @@ TagManager:
   tags:
   - New tag
   - "T\xFCr"
+  - LinksTrigger
+  - RechtsTrigger
+  - ObenTrigger
+  - UntenTrigger
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

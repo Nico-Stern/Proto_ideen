@@ -447,6 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   runspeed: 5
+  Richtung: 1
 --- !u!1 &1280022512
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   runspeed: 5
+  Richtung: 1
 --- !u!1 &1739157755
 GameObject:
   m_ObjectHideFlags: 0
