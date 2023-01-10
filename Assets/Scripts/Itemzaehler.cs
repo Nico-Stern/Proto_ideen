@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,4 +6,9 @@ using UnityEngine;
 public class Itemzaehler : MonoBehaviour
 {
     public int Kristalle = 0;
+
+    private void Update()
+    {
+        
+    }
 }
