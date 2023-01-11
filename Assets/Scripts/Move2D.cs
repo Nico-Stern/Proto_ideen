@@ -29,7 +29,6 @@ public class Move2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             reset();
-            life.Lifepoint -=1;
         }
 
     }

@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class Life : MonoBehaviour
 
 {
-    public int Lifepoint = 12;
-    public Text Lifetext;
+    public static int Lifepoint = 6;
 
     public void Update()
     {
-        Lifetext.text = Lifepoint.ToString();
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            Lifepoint -=1;
+            print(Lifepoint);
+        }
     }
 }
