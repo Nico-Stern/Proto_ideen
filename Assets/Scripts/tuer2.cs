@@ -23,7 +23,7 @@ private void OnTriggerEnter2D(Collider2D collision)
 {
     if (collision.gameObject.CompareTag("Player"))
     {
-        SceneManager.LoadScene(lastscene);
+        SceneManager.LoadScene("Lvl.1");
     }
 
 }

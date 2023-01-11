@@ -14,7 +14,7 @@ public class KellerS : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             SceneManager.LoadScene("Keller");
-            Life.Lifepoint = AufLebenResten;
+            
         }
     } 
 }

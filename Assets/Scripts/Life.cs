@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Life : MonoBehaviour
-
 {
     public static int Lifepoint = 6;
+
 
     public void Update()
     {

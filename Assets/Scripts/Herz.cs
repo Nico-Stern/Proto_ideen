@@ -8,9 +8,16 @@ public class Herz : MonoBehaviour
     public int HP = 100;
     public Life life;
     public int Leben;
-    
-    
 
+
+    public void Start()
+    {
+        Leben = Life.Lifepoint;
+        if (HP >= Leben)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     public void Update()
     {
         Leben = Life.Lifepoint;
