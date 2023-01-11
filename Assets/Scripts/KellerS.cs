@@ -7,12 +7,13 @@ using UnityEngine.UIElements;
 public class KellerS : MonoBehaviour
 {
     public Life life;
-    public int AufLebenResten = 0;
+    public int AufLebenResten = 6;
 
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
+            Life.Lifepoint = AufLebenResten;
             SceneManager.LoadScene("Keller");
             
         }
