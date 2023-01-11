@@ -8,13 +8,12 @@ using UnityEngine.SceneManagement;
 public class Tuer : MonoBehaviour
 {
     private int nextscene;
-    // Start is called before the first frame update
     void Start()
     {
         nextscene = SceneManager.GetActiveScene().buildIndex + 1;
+        
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         
