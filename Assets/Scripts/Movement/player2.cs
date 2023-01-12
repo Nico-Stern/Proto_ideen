@@ -11,7 +11,7 @@ public class player2 : MonoBehaviour
     public float rechteGrenze = 8.5f;
     public float obereGrenze = 4.5f;
     public float untereGrenze = -4.5f;
-    // Start is called before the first frame update
+    public float ansturm = 0.5f;
     void Start()
     {
 
@@ -20,8 +20,8 @@ public class player2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical = Input.GetAxisRaw("Vertical");
-        Vector2 moveH = vertical * Vector2.up * Speed * Time.deltaTime;
+        vertical = Input.GetAxis("Vertical");
+        Vector2 moveH = (vertical* ansturm) * Vector2.up * Speed * Time.deltaTime;
         transform.Translate(moveH);
 
 

@@ -33,7 +33,7 @@ public class Tuer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("DemoEnd");
+            SceneManager.LoadScene("Keller");
         }
 
     }

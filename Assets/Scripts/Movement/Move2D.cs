@@ -12,11 +12,12 @@ public class Move2D : MonoBehaviour
     public float rechteGrenze = 8.5f;
     public float obereGrenze = 4.5f;
     public float untereGrenze = -4.5f;
+    public float ansturm = 0.5f;
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        Vector2 moveH = horizontal * Vector2.right * Speed * Time.deltaTime;
+        horizontal = Input.GetAxis("Horizontal");
+        Vector2 moveH = (horizontal * ansturm) * Vector2.right * Speed * Time.deltaTime;
         transform.Translate(moveH);
 
         Vector2 positionV = transform.position;
