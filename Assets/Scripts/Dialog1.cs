@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,11 @@ public class Dialog1 : MonoBehaviour
     public static int Klicks = 0;
     public GameObject Herzen;
 
+    private void Start()
+    {
+        Klicks = 0;
+    }
+
     void Update()
     {
         DialogGeschichte.text = Geschichte;
@@ -35,12 +41,12 @@ public class Dialog1 : MonoBehaviour
                 break; 
             
             case 2:
-                Toto = "…! ";
+                Toto = "...! ";
                 break;
 
             case 3:
                 
-                Toto = "„Wo sind denn wir gelandet?!“";
+                Toto = "Wo sind denn wir gelandet?!";
                 break;
 
             case 4:
