@@ -239,7 +239,7 @@ MonoBehaviour:
   zaehler: {fileID: 396777735}
   Zielkristale: 9
   Kristalle: 0
-  ziel: 1
+  ziel: 9
 --- !u!4 &41523217
 Transform:
   m_ObjectHideFlags: 0
@@ -2405,6 +2405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60ba8aa6be704748940688cb1a79286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotoM: {fileID: 1896338616}
+  EmmyM: {fileID: 1355016160}
 --- !u!4 &697326876
 Transform:
   m_ObjectHideFlags: 0
@@ -3208,7 +3210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020607938}
-  - component: {fileID: 1020607940}
+  - component: {fileID: 1020607941}
   - component: {fileID: 1020607939}
   m_Layer: 0
   m_Name: Schlossopen
@@ -3248,7 +3250,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4, y: 3}
   m_Direction: 0
---- !u!114 &1020607940
+--- !u!114 &1020607941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3257,7 +3259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020607937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245e05b757f5852429c2e83624c19868, type: 3}
+  m_Script: {fileID: 11500000, guid: 1927abb1a85aebc479826c2a8cb9c876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zaehler: {fileID: 396777735}

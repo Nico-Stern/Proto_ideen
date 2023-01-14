@@ -12,13 +12,15 @@ public class player2 : MonoBehaviour
     public float obereGrenze = 4.5f;
     public float untereGrenze = -4.5f;
     public float ansturm = 0.5f;
-    void Start()
-    {
 
+
+    public void reset()
+    {
+        Vector3 Resetposition = new Vector3(-2, 0, 0);
+        transform.position = Resetposition;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         vertical = Input.GetAxis("Vertical");
         Vector2 moveH = (vertical* ansturm) * Vector2.up * Speed * Time.deltaTime;
@@ -31,20 +33,8 @@ public class player2 : MonoBehaviour
 
         Vector2 positionH = transform.position;
         positionH.x = Mathf.Clamp(positionH.x, linkeGrenze, rechteGrenze);
-        transform.position = positionH;
-
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            reset();
-        }
-        
+        transform.position = positionH;      
     }
 
-    void reset()
-    {
-        Vector3 Resetposition = new Vector3(-2, 0, 0);
-        transform.position = Resetposition;
-        
-    }
 
 }

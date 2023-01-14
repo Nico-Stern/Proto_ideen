@@ -6,9 +6,4 @@ using UnityEngine;
 public class Itemzaehler : MonoBehaviour
 {
     public int Kristalle = 0;
-
-    private void Update()
-    {
-        
-    }
 }

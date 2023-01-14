@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +11,24 @@ public class Dialog2 : MonoBehaviour
     public Text DialogToto;
     public Text DialogNico;
     public Text DialogGeschichte;
+    public Text WDia;
+    public Text SDia;
+    public Text DiaL;
+    public Text DiaR;
     public string Geschichte;
     public string Emmy;
     public string Nico;
     public string Toto;
-    public static int Klicks = 0;
+    public string W;
+    public string S;
+    public string Links;
+    public string Rechts;
+    public int Klicks = 0;
+    public int BewegungL = 0;
+    public int BewegungR = 0;
+    public int BewegungW = 0;
+    public int BewegungS = 0;
+    public int ergebnis = 0;
     public GameObject Herzen;
     public GameObject Lifescript;
     public GameObject Kristalle;
@@ -23,9 +37,21 @@ public class Dialog2 : MonoBehaviour
     public GameObject s;
     public GameObject links;
     public GameObject rechts;
+    public GameObject EmmyR;
+    public GameObject EmmyF;
+    public GameObject TotoR;
+    public GameObject TotoF;
+    public GameObject tutorial;
+    public GameObject t2;
+    public GameObject Anzeige;
+
+
 
     private void Start()
     {
+        Anzeige.SetActive(false);
+        t2.SetActive(false);
+        tutorial.SetActive(false);
         Klicks = 0;
         Herzen.SetActive(false);
         Lifescript.SetActive(false);
@@ -34,18 +60,57 @@ public class Dialog2 : MonoBehaviour
         s.SetActive(false);
         links.SetActive(false);
         rechts.SetActive(false);
+        TotoF.SetActive(false);
+        EmmyF.SetActive(false);
+        W = "[W]";
+        S = "[S]";
+        Links = "[<]";
+        Rechts = "[>]";
     }
 
-    private void Update()
+ 
+    
+       
+    
+
+    public void Update()
     {
+        
         DialogGeschichte.text = Geschichte;
         DialogNico.text = Nico;
         DialogToto.text = Toto;
         DialogEmmy.text= Emmy;
+        WDia.text = W;
+        SDia.text = S;
+        DiaL.text = Links;
+        DiaR.text = Rechts;
+        
         Geschichte = "";
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Klicks += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.W) && Klicks>=16)
+        {
+            W = "";
+            w.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.S) && Klicks >= 16)
+        {
+            S = "";
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Klicks >= 16)
+        {
+            Links = "";
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) && Klicks >= 16)
+        {
+            Rechts = "";
+        }
+        
+        if (S == "" && W == "" && Links == "" && Rechts == "")
+        {
+            tutorial.SetActive(true);          
         }
         switch (Klicks)
         {
@@ -124,14 +189,13 @@ public class Dialog2 : MonoBehaviour
                 s.SetActive(true);
                 links.SetActive(true);
                 rechts.SetActive(true);
+                TotoF.SetActive(true);
+                EmmyF.SetActive(true);
+                TotoR.SetActive(false);
+                EmmyR.SetActive(false);
                 break;
-                
-            
-            
-            
-            
-                
-                
+            default:
+                break;
         }
     }
 }

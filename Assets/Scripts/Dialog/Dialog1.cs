@@ -17,10 +17,12 @@ public class Dialog1 : MonoBehaviour
     public string Toto;
     public static int Klicks = 0;
     public GameObject Herzen;
+    
 
     private void Start()
     {
         Klicks = 0;
+        
     }
 
     void Update()

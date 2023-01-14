@@ -14,7 +14,7 @@ public class Move2D : MonoBehaviour
     public float untereGrenze = -4.5f;
     public float ansturm = 0.5f;
 
-    void Update()
+   public void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
         Vector2 moveH = (horizontal * ansturm) * Vector2.right * Speed * Time.deltaTime;
@@ -27,14 +27,10 @@ public class Move2D : MonoBehaviour
         Vector2 positionH = transform.position;
         positionH.x = Mathf.Clamp(positionH.x, linkeGrenze, rechteGrenze);
         transform.position = positionH;
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            reset();
-        }
-
+ 
     }
 
-    void reset()
+    public void reset()
     {
         Vector3 Resetposition = new Vector3(2, 0, 0);
         transform.position = Resetposition;
