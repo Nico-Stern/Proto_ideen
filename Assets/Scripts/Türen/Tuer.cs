@@ -29,7 +29,7 @@ public class Tuer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Toto") || (collision.gameObject.CompareTag("Emmy")))
         {
             SceneManager.LoadScene("Keller");
         }

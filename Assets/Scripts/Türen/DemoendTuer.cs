@@ -28,8 +28,7 @@ public class DemoendTuer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player1") || (collision.gameObject.CompareTag("Player2")))
         {
-            SceneManager.LoadScene("DemoEnd");
-            
+            SceneManager.LoadScene("DemoEnd");           
         }
     }
     

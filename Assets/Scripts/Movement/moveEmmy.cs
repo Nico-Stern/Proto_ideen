@@ -74,10 +74,12 @@ public class moveEmmy : MonoBehaviour
         if (collision.gameObject.CompareTag("HRechts"))
         {
             HL=1;
+            print("1");
         }
         if (collision.gameObject.CompareTag("HLinks"))
         {
             HR=1;
+            print("1");
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
