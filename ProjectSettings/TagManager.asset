@@ -12,6 +12,9 @@ TagManager:
   - UntenTrigger
   - Player1
   - Player2
+  - Kiste
+  - Emmy
+  - Toto
   layers:
   - Default
   - TransparentFX

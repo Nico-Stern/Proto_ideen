@@ -18,10 +18,11 @@ public class Life : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            TotoM.reset ();
+           /* TotoM.reset ();
             EmmyM.reset ();
             Lifepoint -=1;
             print(Lifepoint);
+            */
         }
     }
 }

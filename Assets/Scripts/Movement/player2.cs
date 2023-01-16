@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.PlayerLoop;
 
 public class player2 : MonoBehaviour
 {
+    public float horizontal;
     public float vertical;
     public float Speed = 5f;
     public float linkeGrenze = -8.5f;
@@ -33,8 +35,18 @@ public class player2 : MonoBehaviour
 
         Vector2 positionH = transform.position;
         positionH.x = Mathf.Clamp(positionH.x, linkeGrenze, rechteGrenze);
-        transform.position = positionH;      
+        transform.position = positionH;   
+        
+        
     }
 
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") || Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            horizontal = Input.GetAxis("Horizontal");
+            Vector2 moveH = (horizontal * ansturm) * Vector2.right * Speed * Time.deltaTime;
+            transform.Translate(moveH);
+        }
+    }
 }
