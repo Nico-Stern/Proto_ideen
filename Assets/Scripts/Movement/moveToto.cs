@@ -13,9 +13,14 @@ public class moveToto : MonoBehaviour
     public int HL;
     public int HO;
     public int HU;
-
     public int Oben;
     public int Unten;
+    public moveEmmy Emmy;
+    public void reset()
+    {
+        Vector3 Resetposition = new Vector3(2, 0, 0);
+        transform.position = Resetposition;
+    }
     public void Update()
     {
         Vector2 positionV = transform.position;
@@ -28,13 +33,13 @@ public class moveToto : MonoBehaviour
 
         Vector2 positionT = transform.position;
         
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && HL == 0)
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) && HL == 0 && Emmy.HL==0 && Emmy.Links==1)|| ((Input.GetKeyDown(KeyCode.LeftArrow) && Emmy.Links ==0 && Emmy.HL ==0 && HL == 0)) ||((Input.GetKeyDown(KeyCode.LeftArrow) && Emmy.Links ==0 && Emmy.HL ==1 && HL == 0)))
         {
             Vector2 positionl = Vector2.left;
             transform.Translate(positionl);
             
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && HR == 0)
+        if ((Input.GetKeyDown(KeyCode.RightArrow) && HR == 0 && Emmy.HR==0 && Emmy.Rechts==1)|| ((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==0 && HR == 0)) ||((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==1 && HR == 0)))
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
@@ -74,18 +79,19 @@ public class moveToto : MonoBehaviour
         if (collision.gameObject.CompareTag("HRechts"))
         {
             HL = 1;
-            print("1");
+            
         }
         if (collision.gameObject.CompareTag("HLinks"))
         {
             HR = 1;
-            print("1");
+            
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ObenTrigger"))
             Oben = 0;
+        
         if (collision.gameObject.CompareTag("UntenTrigger"))
             Unten = 0;
         if (collision.gameObject.CompareTag("HOben"))
@@ -103,8 +109,9 @@ public class moveToto : MonoBehaviour
         if (collision.gameObject.CompareTag("HLinks"))
         {
             HR = 0;
+           
         }
     }
-
+    
 
 }

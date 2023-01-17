@@ -14,9 +14,13 @@ public class moveEmmy : MonoBehaviour
     public int HL;
     public int HO;
     public int HU;
-
+    public moveToto Toto;
     
-
+    public void reset()
+    {
+        Vector3 Resetposition = new Vector3(-2, 0, 0);
+        transform.position = Resetposition;
+    }
     public void Update()
     {
         Vector2 positionV = transform.position;
@@ -29,13 +33,13 @@ public class moveEmmy : MonoBehaviour
 
         Vector2 positionE = transform.position;
 
-        if (Input.GetKeyDown(KeyCode.W) && HO == 0)
+        if ((Input.GetKeyDown(KeyCode.W) && HO == 0 && Toto.HO==0 && Toto.Unten==1)|| ((Input.GetKeyDown(KeyCode.W) && Toto.Unten ==0 && Toto.HO ==0 && HO == 0)) ||((Input.GetKeyDown(KeyCode.W) && Toto.Unten ==0 && Toto.HO ==1 && HO == 0)))
         {
             Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && HU == 0)
+        if ((Input.GetKeyDown(KeyCode.S) && HU == 0 && Toto.HU==0 && Toto.Oben==1)|| ((Input.GetKeyDown(KeyCode.S) && Toto.Oben ==0 && Toto.HU ==0 && HU == 0)) ||((Input.GetKeyDown(KeyCode.S) && Toto.Oben ==0 && Toto.HU ==1 && HU == 0)))
         {
             Vector2 positionS = Vector2.down;
             transform.Translate(positionS);
@@ -57,11 +61,13 @@ public class moveEmmy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RechtsTrigger"))
         {
-            Rechts = 1;          
+            Rechts = 1;   
+           
         }
         if (collision.gameObject.CompareTag("LinksTrigger"))
         {
             Links = 1;
+            
         }
         if (collision.gameObject.CompareTag("HOben"))
         {
@@ -74,20 +80,22 @@ public class moveEmmy : MonoBehaviour
         if (collision.gameObject.CompareTag("HRechts"))
         {
             HL=1;
-            print("1");
+            
         }
         if (collision.gameObject.CompareTag("HLinks"))
         {
             HR=1;
-            print("1");
+            
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("RechtsTrigger"))
             Rechts = 0;
+        
         if (collision.gameObject.CompareTag("LinksTrigger"))
             Links = 0;
+                
         if (collision.gameObject.CompareTag("HOben"))
         {
             HU = 0;
@@ -103,6 +111,8 @@ public class moveEmmy : MonoBehaviour
         if (collision.gameObject.CompareTag("HLinks"))
         {
             HR = 0;
+            
         }
     }
+    
 }
