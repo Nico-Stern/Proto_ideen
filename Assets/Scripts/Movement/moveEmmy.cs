@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,12 @@ public class moveEmmy : MonoBehaviour
     public int HO;
     public int HU;
     public moveToto Toto;
-    
+
+    private void Start()
+    {
+        
+    }
+
     public void reset()
     {
         Vector3 Resetposition = new Vector3(-2, 0, 0);

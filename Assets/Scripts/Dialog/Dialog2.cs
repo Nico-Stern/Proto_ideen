@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,11 +45,14 @@ public class Dialog2 : MonoBehaviour
     public GameObject tutorial;
     public GameObject t2;
     public GameObject Anzeige;
+    
+    
 
 
 
     private void Start()
     {
+        
         Anzeige.SetActive(false);
         t2.SetActive(false);
         tutorial.SetActive(false);

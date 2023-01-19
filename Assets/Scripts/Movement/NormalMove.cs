@@ -9,13 +9,6 @@ public class NormalMove : MonoBehaviour
     public float runspeed = 5f;
     public int Richtung = 1;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         
