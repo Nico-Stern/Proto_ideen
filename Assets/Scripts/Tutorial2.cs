@@ -17,6 +17,9 @@ public class Tutorial2 : MonoBehaviour
     public GameObject Herzen;
     public GameObject Lifescript;
     public GameObject Nicogeist;
+    public GameObject story;
+    public moveEmmy EmmyS;
+    public moveToto TotoS;
 
     public void Update()
     {
@@ -24,6 +27,7 @@ public class Tutorial2 : MonoBehaviour
         DialogNico.text = Nico;
         DialogToto.text = Toto;
         DialogEmmy.text = Emmy;
+        Geschichte = "[SPACE]";
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             tap += 1;
@@ -32,7 +36,12 @@ public class Tutorial2 : MonoBehaviour
         switch(tap )
         {
             case 1:
+                EmmyS.down = 0;
+                EmmyS.up = 0;
+                TotoS.left = 0;
+                TotoS.right = 0;
                 Nicogeist.SetActive(true);
+                story.SetActive(true);
                 Nico = "Falls ihr mit eurer Mechanik nicht weiterkommt";
                 break;
             case 2:
@@ -45,10 +54,15 @@ public class Tutorial2 : MonoBehaviour
                 Nico = "Doch seid vorsichtig!";
                 break;
             case 5:
+                EmmyS.down = 1;
+                EmmyS.up = 1;
+                TotoS.left = 1;
+                TotoS.right = 1;
                 Nico = "da dieser euch die Hälfte eines Herzen entnimmt";
                 break;
             case 6:
                 Nico = "";
+                story.SetActive(false);
                 Nicogeist.SetActive(false);
                 Lifescript.SetActive(true);
                 Herzen.SetActive(true);

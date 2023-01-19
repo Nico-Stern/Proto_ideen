@@ -31,34 +31,34 @@ public class Dialog1 : MonoBehaviour
         DialogNico.text = Nico;
         DialogToto.text = Toto;
         DialogEmmy.text= Emmy;
-        Geschichte = "";
+        Geschichte = "[SPACE]";
+        Toto = "Autsch! Mein Kopf tut weh ";
+
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Klicks += 1;
         }
             switch (Klicks)
         {
+
+
             case 1:
-                Toto = "Autsch! Mein Kopf tut weh ";
-                break; 
-            
-            case 2:
                 Toto = "...! ";
                 break;
 
-            case 3:
+            case 2:
                 
                 Toto = "Wo sind denn wir gelandet?!";
                 break;
 
-            case 4:
+            case 3:
                 Toto = "";
                 SceneManager.LoadScene("Lvl.1");
                 Herzen.SetActive(false);
                 
                 break;
 
-            case 5:
+            case 4:
 
                 break;
                 

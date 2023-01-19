@@ -312,7 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18248084
 GameObject:
@@ -647,7 +647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44102791
 GameObject:
@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902127b4469f23e4a9fca945347a51c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: {fileID: 697326875}
+  life: {fileID: 0}
   Lifepoints: 0
 --- !u!4 &250134774
 Transform:
@@ -2597,7 +2597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251640115
 GameObject:
@@ -3262,36 +3262,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.8}
   m_EdgeRadius: 0
---- !u!1 &370536817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 370536818}
-  m_Layer: 0
-  m_Name: ----- (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &370536818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370536817}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28709343, y: 0.78982013, z: -3.1511261}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &378989646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,7 +3943,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448384739
 GameObject:
@@ -4176,7 +4146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 5
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &471957273
 SpriteRenderer:
@@ -4442,7 +4413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &476386196
 SpriteRenderer:
@@ -4770,7 +4742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509979040
 GameObject:
@@ -5229,7 +5201,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &634477886
 MonoBehaviour:
@@ -5842,7 +5814,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 697326874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d60ba8aa6be704748940688cb1a79286, type: 3}
+  m_Script: {fileID: 11500000, guid: b6afbda6e6e3b4842a0d6dc8d29addf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   totom: {fileID: 1896338616}
@@ -6117,7 +6089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &739675332
 GameObject:
@@ -6988,7 +6960,7 @@ Transform:
   m_Children:
   - {fileID: 1387389813}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873022541
 GameObject:
@@ -7019,7 +6991,7 @@ Transform:
   m_LocalScale: {x: 0.53375, y: 0.40249997, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &873022544
 MonoBehaviour:
@@ -7118,7 +7090,7 @@ Transform:
   - {fileID: 1773806196}
   - {fileID: 2122866936}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897811917
 GameObject:
@@ -7247,7 +7219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 1
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &900102592
 SpriteRenderer:
@@ -8021,7 +7994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1012199770
 GameObject:
@@ -8206,7 +8179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015387546
 GameObject:
@@ -8349,7 +8322,7 @@ Transform:
   - {fileID: 674387227}
   - {fileID: 1012199771}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020607937
 GameObject:
@@ -8670,7 +8643,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055432227
 GameObject:
@@ -9776,7 +9749,7 @@ Transform:
   - {fileID: 746321384}
   - {fileID: 2045355428}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143654106
 GameObject:
@@ -10439,7 +10412,7 @@ Transform:
   - {fileID: 1404446730}
   - {fileID: 1020607938}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278602314
 GameObject:
@@ -10829,7 +10802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322310280
 GameObject:
@@ -11245,9 +11218,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1355016158}
-  - component: {fileID: 1355016160}
   - component: {fileID: 1355016159}
   - component: {fileID: 1355016161}
+  - component: {fileID: 1355016160}
   m_Layer: 0
   m_Name: Emmy
   m_TagString: Emmy
@@ -11301,13 +11274,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355016157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07126c52ee5a7f644abc2c12f8681700, type: 3}
+  m_Script: {fileID: 11500000, guid: c418c17d0ac95da459800c80a3171e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkeGrenze: -12
-  rechteGrenze: 12
-  obereGrenze: 12
-  untereGrenze: -12
+  linkeGrenze: -8.5
+  rechteGrenze: 8.5
+  obereGrenze: 4.5
+  untereGrenze: -4.5
   Rechts: 0
   Links: 0
   HR: 0
@@ -11315,6 +11288,8 @@ MonoBehaviour:
   HO: 0
   HU: 0
   Toto: {fileID: 1896338616}
+  up: -1
+  down: -1
 --- !u!61 &1355016161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11599,7 +11574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 2
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &1381890558
 SpriteRenderer:
@@ -13558,7 +13534,7 @@ Transform:
   - {fileID: 1197493067}
   - {fileID: 1435060405}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627147846
 GameObject:
@@ -13982,7 +13958,7 @@ Transform:
   - {fileID: 1530253415}
   - {fileID: 249345365}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710761344
 GameObject:
@@ -14403,7 +14379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751046373
 GameObject:
@@ -14567,7 +14543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1773806195
 GameObject:
@@ -14671,7 +14647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &1782738965
 SpriteRenderer:
@@ -14965,7 +14942,7 @@ Transform:
   - {fileID: 897811918}
   - {fileID: 1832111644}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832111643
 GameObject:
@@ -15299,7 +15276,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876326791
 GameObject:
@@ -15422,9 +15399,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1896338614}
-  - component: {fileID: 1896338616}
   - component: {fileID: 1896338615}
   - component: {fileID: 1896338617}
+  - component: {fileID: 1896338616}
   m_Layer: 0
   m_Name: Toto
   m_TagString: Toto
@@ -15439,7 +15416,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896338613}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
@@ -15478,13 +15455,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896338613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f349ffd56cd1b418d08066eb9d8712, type: 3}
+  m_Script: {fileID: 11500000, guid: a110c9d1bc972354c8949945cd16ba7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkeGrenze: -12
-  rechteGrenze: 12
-  obereGrenze: 12
-  untereGrenze: -12
+  linkeGrenze: -8.5
+  rechteGrenze: 8.5
+  obereGrenze: 4.5
+  untereGrenze: -4.5
   HR: 0
   HL: 0
   HO: 0
@@ -15492,6 +15469,8 @@ MonoBehaviour:
   Oben: 0
   Unten: 0
   Emmy: {fileID: 1355016160}
+  left: -1
+  right: -1
 --- !u!61 &1896338617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15951,7 +15930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
-  life: {fileID: 697326875}
+  life: {fileID: 0}
+  Life2: {fileID: 697326875}
   Leben: 0
 --- !u!212 &1930725818
 SpriteRenderer:
@@ -16589,7 +16569,7 @@ Transform:
   - {fileID: 158235516}
   - {fileID: 1087903382}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997079810
 GameObject:

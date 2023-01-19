@@ -16,7 +16,10 @@ public class moveToto : MonoBehaviour
     public int Oben;
     public int Unten;
     public moveEmmy Emmy;
-    
+    public int left = -1;
+    public int right = -1;
+    public Tutorial tut;
+
     private void Start()
     {
         
@@ -38,17 +41,21 @@ public class moveToto : MonoBehaviour
 
         Vector2 positionT = transform.position;
         
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) && HL == 0 && Emmy.HL==0 && Emmy.Links==1)|| ((Input.GetKeyDown(KeyCode.LeftArrow) && Emmy.Links ==0 && Emmy.HL ==0 && HL == 0)) ||((Input.GetKeyDown(KeyCode.LeftArrow) && Emmy.Links ==0 && Emmy.HL ==1 && HL == 0)))
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) && left !=0 && HL == 0 && Emmy.HL==0 && Emmy.Links==1) || ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links ==0 && Emmy.HL ==0 && HL == 0)) ||((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links ==0 && Emmy.HL ==1 && HL == 0)))
         {
             Vector3 positionl = Vector3.left;
             transform.Translate(positionl);
+            left++;
             
+
         }
-        if ((Input.GetKeyDown(KeyCode.RightArrow) && HR == 0 && Emmy.HR==0 && Emmy.Rechts==1)|| ((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==0 && HR == 0)) ||((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==1 && HR == 0)))
+        if ((Input.GetKeyDown(KeyCode.RightArrow) && right !=0 && HR == 0 && Emmy.HR==0 && Emmy.Rechts==1) || ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && Emmy.Rechts ==0 && Emmy.HR ==0 && HR == 0)) ||((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==1 && HR == 0)))
         {
             Vector3 positionr = Vector3.right;
             transform.Translate(positionr);
-           
+            right++;
+            
+
         }
         if (Input.GetKeyDown(KeyCode.W) && Unten == 1 && HO == 0)
         {

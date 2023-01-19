@@ -24,7 +24,7 @@ public class Dialog2 : MonoBehaviour
     public string S;
     public string Links;
     public string Rechts;
-    public int Klicks = 0;
+    public int Klicks = 1;
     public int BewegungL = 0;
     public int BewegungR = 0;
     public int BewegungW = 0;
@@ -45,6 +45,9 @@ public class Dialog2 : MonoBehaviour
     public GameObject tutorial;
     public GameObject t2;
     public GameObject Anzeige;
+    public GameObject Story;
+    public moveEmmy EmmyS;
+    public moveToto TotoS;
     
     
 
@@ -56,7 +59,7 @@ public class Dialog2 : MonoBehaviour
         Anzeige.SetActive(false);
         t2.SetActive(false);
         tutorial.SetActive(false);
-        Klicks = 0;
+        Klicks = 1;
         Herzen.SetActive(false);
         Lifescript.SetActive(false);
         Kristalle.SetActive(false);
@@ -70,6 +73,7 @@ public class Dialog2 : MonoBehaviour
         S = "[S]";
         Links = "[<]";
         Rechts = "[>]";
+        Geschichte = "[SPACE]";
     }
 
  
@@ -89,7 +93,8 @@ public class Dialog2 : MonoBehaviour
         DiaL.text = Links;
         DiaR.text = Rechts;
         
-        Geschichte = "";
+        Geschichte = "[SPACE]";
+        
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Klicks += 1;
@@ -188,6 +193,7 @@ public class Dialog2 : MonoBehaviour
             
             case 16:
                 Nico = "";
+                Story.SetActive(false);
                 Blackscreen.SetActive(false);
                 w.SetActive(true);
                 s.SetActive(true);
@@ -197,6 +203,7 @@ public class Dialog2 : MonoBehaviour
                 EmmyF.SetActive(true);
                 TotoR.SetActive(false);
                 EmmyR.SetActive(false);
+                
                 break;
             default:
                 break;

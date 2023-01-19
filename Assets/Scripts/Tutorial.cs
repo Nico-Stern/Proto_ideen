@@ -21,12 +21,15 @@ public class Tutorial : MonoBehaviour
     public int tap = 1;
     public GameObject dialog;
     public GameObject t2;
+    public GameObject story;
     public Itemzaehler zaehler;
     public GameObject Anzeige;
+    public moveEmmy EmmyS;
+    public moveToto TotoS;
 
     private void Start()
     {
-        print("hi");
+        tap = 1; 
     }
 
     public void Update()
@@ -35,6 +38,7 @@ public class Tutorial : MonoBehaviour
         DialogNico.text = Nico;
         DialogToto.text = Toto;
         DialogEmmy.text = Emmy;
+        Geschichte = "[SPACE]";
         if (zaehler.Kristalle >= 2)
         {
             t2.SetActive(true);
@@ -48,7 +52,9 @@ public class Tutorial : MonoBehaviour
         switch (tap)
         {
             case 1:
+                story.SetActive(true);
                 Nico = "Gut so!";
+                
                 break;
             case 2:
                 Nico = "Mit dieser Mechanik müsst ihr euch unterstützen und aus dem Haus fliehen!";
@@ -68,9 +74,14 @@ public class Tutorial : MonoBehaviour
                 Nico = "Probiert es aus!";
                 Kristalle.SetActive(true);
                 Anzeige.SetActive(true);
+                EmmyS.down = 1;
+                EmmyS.up = 1;
+                TotoS.left = 1;
+                TotoS.right = 1;
                 break;
             case 7:
                 Nico = "";
+                story.SetActive(false);
                 break;
             default:
                 Nico = "";
