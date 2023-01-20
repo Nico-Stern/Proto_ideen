@@ -11,7 +11,7 @@ public class Herz1 : MonoBehaviour
 
     public void Start()
     {
-        Leben = Life.Lifepoint;
+        Leben = life.Lifepoint;
         
         if (HP >= Leben)
         {
@@ -21,7 +21,7 @@ public class Herz1 : MonoBehaviour
 
     public void Update()
     {
-        Leben = Life.Lifepoint;
+        Leben = life.Lifepoint;
 
         if (HP == Leben)
         {

@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
-    public Life life;
+    public Leben life;
+    
     public int Lifepoints;
     void Start()
     {
@@ -13,10 +14,12 @@ public class Death : MonoBehaviour
     }
     public void Update()
     {
-        Lifepoints = Life.Lifepoint;
+        Lifepoints = Leben.Lebenanzahl;
         if (Lifepoints == 0)
         {
             SceneManager.LoadScene("Death");
+            
         }
+        
     }
 }

@@ -8,20 +8,28 @@ public class Life : MonoBehaviour
 {
     public moveToto totom;
     public moveEmmy emmym;
+    
     public GameObject TD;
     public GameObject ED;
-    public static int Lifepoint = 6;
+    public int Lifepoint = 6;
+    public Leben AL;
 
-    
+
     public void Update()
     {
+        Lifepoint = Leben.Lebenanzahl;
         if (Input.GetKeyDown(KeyCode.Space) == true)
-        {   totom.reset();
-            emmym.reset();
+            
+        {
+            Leben.Lebenanzahl--;
+           
             ED.transform.position = new Vector3(700, 500);
-            TD.transform.position = new Vector3(1200, 500);
-            Lifepoint -=1;
+            TD.transform.position = new Vector3(1200, 500);          
             print(Lifepoint);
+            totom.reset();
+            emmym.reset();
+            
+
         }
     }
 }

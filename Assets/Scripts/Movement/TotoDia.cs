@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;   
 
 public class TotoDia : MonoBehaviour
 {
     
     public EmmyDia Emmy;
-   
     
-
-   
+    
     public void reset()
     {
-        Vector3 Resetposition = new Vector3(200, 0, 0);
+        Vector3 Resetposition = new Vector3(1200, 500, 0);
         transform.position = Resetposition;
     }
     public void Up()

@@ -19,7 +19,7 @@ public class Herzanzeige : MonoBehaviour
 
     public void Update()
     {
-        int Leben = Life.Lifepoint;
+        int Leben = life.Lifepoint;
         int HPP = HP.HP;
         
     }

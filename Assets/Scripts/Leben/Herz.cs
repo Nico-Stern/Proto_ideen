@@ -6,25 +6,24 @@ using UnityEngine;
 public class Herz : MonoBehaviour
 {
     public int HP = 100;
-    public Life life;
-    public Life2 Life2;
-    public int Leben;
+    public Leben life;
+    
+    public int Le;
 
 
     public void Start()
     {
-        Leben = Life.Lifepoint;
-        Leben= Life2.Lifepoint;
-        if (HP >= Leben)
+        Le = Leben.Lebenanzahl;
+        
+        if (HP >= Le)
         {
             gameObject.SetActive(false);
         }
     }
     public void Update()
     {
-        Leben = Life.Lifepoint;
-        Leben= Life2.Lifepoint;
-        if(HP==Leben)
+        Le = Leben.Lebenanzahl;
+        if (HP==Le)
         {
             gameObject.SetActive(false);
         }

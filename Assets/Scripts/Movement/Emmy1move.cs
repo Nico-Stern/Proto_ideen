@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Emmy1move : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class Emmy1move : MonoBehaviour
     public EmmyDia ED;
     public int up = -1;
     public int down = -1;
-    
+    public Text DialogEmmy;
+    public string Emmy;
+
 
     private void Start()
     {
@@ -33,6 +36,7 @@ public class Emmy1move : MonoBehaviour
     }
     public void Update()
     {
+        DialogEmmy.text = Emmy;
         Vector2 positionV = transform.position;
         positionV.y = Mathf.Clamp(positionV.y, untereGrenze, obereGrenze);
         transform.position = positionV;
@@ -72,6 +76,7 @@ public class Emmy1move : MonoBehaviour
         }
 
 
+
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -103,6 +108,15 @@ public class Emmy1move : MonoBehaviour
             HR = 1;
 
         }
+        if (collision.gameObject.CompareTag("DiaL"))
+        {
+            Emmy = ("Hier komme ich nicht mehr Raus");
+        }
+
+        if ((collision.gameObject.CompareTag("DiaR")))
+        {
+            Emmy = ("Hier komme ich nicht mehr Raus");
+        }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -128,6 +142,15 @@ public class Emmy1move : MonoBehaviour
         {
             HR = 0;
 
+        }
+        if (collision.gameObject.CompareTag("DiaL"))
+        {
+            Emmy = "";
+        }
+
+        if ((collision.gameObject.CompareTag("DiaR")))
+        {
+            Emmy = "";
         }
     }
 }

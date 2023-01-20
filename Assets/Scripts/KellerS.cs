@@ -6,14 +6,16 @@ using UnityEngine.UIElements;
 
 public class KellerS : MonoBehaviour
 {
-    public Life life;
+    public Leben life;
+    
     public int AufLebenResten = 6;
 
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Life.Lifepoint = AufLebenResten;
+            Leben.Lebenanzahl = AufLebenResten;
+            
             SceneManager.LoadScene("Keller");
             
         }

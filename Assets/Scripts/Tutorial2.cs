@@ -61,13 +61,14 @@ public class Tutorial2 : MonoBehaviour
                     break;
                 
             case 7:
+                
+                Nico = "Also seid vorsichtig mit euren Wünschen";
+                break;
+            case 8:
                 EmmyS.down = 1;
                 EmmyS.up = 1;
                 TotoS.left = 1;
                 TotoS.right = 1;
-                Nico = "Also seid vorsichtig mit euren Wünschen";
-                break;
-            case 8:
                 Nico = "";
                 story.SetActive(false);
                 Nicogeist.SetActive(false);

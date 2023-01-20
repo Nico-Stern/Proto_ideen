@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class toto1move : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class toto1move : MonoBehaviour
     public TotoDia TD;
     public int left = -1;
     public int right = -1;
-    
+    public Text DialogToto;
+    public string Toto;
+
 
     private void Start()
     {
@@ -32,6 +35,7 @@ public class toto1move : MonoBehaviour
     }
     public void Update()
     {
+        DialogToto.text = Toto;
         Vector2 positionV = transform.position;
         positionV.y = Mathf.Clamp(positionV.y, untereGrenze, obereGrenze);
         transform.position = positionV;
@@ -102,6 +106,15 @@ public class toto1move : MonoBehaviour
             HR = 1;
 
         }
+        if (collision.gameObject.CompareTag("DiaU"))
+        {
+            Toto = "Ich stecke fest";
+        }
+
+        if (collision.gameObject.CompareTag("DiaD"))
+        {
+            Toto = "Ich stecke fest";
+        }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -126,6 +139,15 @@ public class toto1move : MonoBehaviour
         {
             HR = 0;
 
+        }
+        if (collision.gameObject.CompareTag("DiaU"))
+        {
+            Toto = "";
+        }
+
+        if (collision.gameObject.CompareTag("DiaD"))
+        {
+            Toto = "";
         }
     }
 }
