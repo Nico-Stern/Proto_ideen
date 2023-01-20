@@ -11963,7 +11963,7 @@ MonoBehaviour:
   zaehler: {fileID: 1193054494}
   Zielkristale: 9
   Kristalle: 0
-  ziel: 18
+  ziel: 2
 --- !u!4 &1645792915
 Transform:
   m_ObjectHideFlags: 0

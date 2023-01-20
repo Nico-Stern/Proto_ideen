@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1Dialog.unity
     guid: 42ceea3a033f1c843ac320015faff22e
+  - enabled: 1
+    path: Assets/Scenes/Lvl.3.unity
+    guid: 6a10a1fad76e38146bfef9e9c587fbef
   m_configObjects: {}
