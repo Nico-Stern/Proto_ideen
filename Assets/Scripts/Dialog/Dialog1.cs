@@ -43,12 +43,12 @@ public class Dialog1 : MonoBehaviour
 
 
             case 1:
-                Toto = "...! ";
+                Toto = "...? ";
                 break;
 
             case 2:
                 
-                Toto = "Wo sind denn wir gelandet?!";
+                Toto = "Wo sind denn wir gelandet?";
                 break;
 
             case 3:

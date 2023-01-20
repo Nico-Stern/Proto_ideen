@@ -15,6 +15,7 @@ public class Emmy1move : MonoBehaviour
     public int HO;
     public int HU;
     public toto1move Toto;
+    public EmmyDia ED;
     public int up = -1;
     public int down = -1;
     
@@ -46,7 +47,7 @@ public class Emmy1move : MonoBehaviour
         {
             Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
-            
+            ED.Up();
             
         }
 
@@ -54,18 +55,20 @@ public class Emmy1move : MonoBehaviour
         {
             Vector2 positionS = Vector2.down;
             transform.Translate(positionS);
-            
+            ED.Down();
            
         }
         if (Rechts == 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0)
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
+            ED.Right();
         }
         if (Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
         {
             Vector2 positionr = Vector2.left;
             transform.Translate(positionr);
+            ED.Left();
         }
 
 

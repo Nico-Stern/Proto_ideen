@@ -57,18 +57,18 @@ public class Tutorial : MonoBehaviour
                 
                 break;
             case 2:
-                Nico = "Mit dieser Mechanik müsst ihr euch unterstützen und aus dem Haus fliehen!";
+                Nico = "Mit dieser Mechanik mÃ¼sst ihr euch unterstÃ¼tzen und aus dem Haus fliehen!";
                 break;
             case 3:
                 Nico = "";
-                Emmy = "Müssen wir auf irgendetwas achten?";
+                Emmy = "Gibt es noch etwas, was wir dabei beachten mÃ¼ssen?";
                 break;
             case 4:
                 Emmy = "";
-                Nico = "Ja. Alle Türen des Hauses sind verschlossen";
+                Nico = "Ja. Alle TÃ¼ren des Hauses sind verschlossen";
                 break;
             case 5:
-                Nico = "Ihr müsst die einzelne Kristallsplitter sammeln und diese zu einem ganzen fügen";
+                Nico = "Ihr mÃ¼sst die einzelne Kristallsplitter sammeln und diese zu einem ganzen fÃ¼gen";
                 break;
             case 6:
                 Nico = "Probiert es aus!";

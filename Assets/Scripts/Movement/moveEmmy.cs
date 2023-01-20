@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime;
 using UnityEngine;
+using  UnityEngine.UI;
 
 public class moveEmmy : MonoBehaviour
 {
@@ -17,13 +18,16 @@ public class moveEmmy : MonoBehaviour
     public int HO;
     public int HU;
     public moveToto Toto;
+    public EmmyDia ED;
     public int up = -1;
     public int down = -1;
     public Tutorial tut;
+    public Text DialogEmmy;
+    public string Emmy;
 
     private void Start()
     {
-        
+        Emmy = "";
     }
 
     public void reset()
@@ -33,6 +37,7 @@ public class moveEmmy : MonoBehaviour
     }
     public void Update()
     {
+        DialogEmmy.text = Emmy;
         Vector2 positionV = transform.position;
         positionV.y = Mathf.Clamp(positionV.y, untereGrenze, obereGrenze);
         transform.position = positionV;
@@ -48,7 +53,7 @@ public class moveEmmy : MonoBehaviour
             Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
             ++up;
-           
+           ED.Up();
         }
 
         if ((Input.GetKeyDown(KeyCode.S) && down != 0 && HU == 0 && Toto.HU==0 && Toto.Oben==1)|| ((Input.GetKeyDown(KeyCode.S) && down != 0 && Toto.Oben ==0 && Toto.HU ==0 && HU == 0)) ||((Input.GetKeyDown(KeyCode.S) && Toto.Oben ==0 && Toto.HU ==1 && HU == 0)))
@@ -56,19 +61,21 @@ public class moveEmmy : MonoBehaviour
             Vector2 positionS = Vector2.down;
             transform.Translate(positionS);
             down++;
-            
+            ED.Down();
         }
         if(Rechts== 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0) 
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
+            ED.Right();
         }
         if (Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
         {
             Vector2 positionr = Vector2.left;
             transform.Translate(positionr);
+            ED.Left();
         }
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) && tut.tap == 6 || (Input.GetKeyDown(KeyCode.RightArrow) && tut.tap == 6 || (Input.GetKeyDown(KeyCode.S) && tut.tap == 6 || (Input.GetKeyDown(KeyCode.W) && tut.tap == 6)))))
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) && tut.tap == 6 ))
         {
             tut.tap++;
         }
@@ -105,6 +112,19 @@ public class moveEmmy : MonoBehaviour
             HR=1;
             
         }
+
+        if (collision.gameObject.CompareTag("DiaL"))
+        {
+            Emmy = ("Hier komme ich nicht mehr Raus");
+        }
+
+        if ((collision.gameObject.CompareTag("DiaR")))
+        {
+            Emmy = ("Hier komme ich nicht mehr Raus");
+        }
+        
+            
+        
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -130,6 +150,15 @@ public class moveEmmy : MonoBehaviour
         {
             HR = 0;
             
+        }
+        if (collision.gameObject.CompareTag("DiaL"))
+        {
+            Emmy = "";
+        }
+
+        if ((collision.gameObject.CompareTag("DiaR")))
+        {
+            Emmy = "";
         }
     }
     

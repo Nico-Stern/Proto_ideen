@@ -42,25 +42,32 @@ public class Tutorial2 : MonoBehaviour
                 TotoS.right = 0;
                 Nicogeist.SetActive(true);
                 story.SetActive(true);
-                Nico = "Falls ihr mit eurer Mechanik nicht weiterkommt";
+                Nico = "Falls ihr mit eurer Mechanik nicht weiter kommen solltet";
                 break;
             case 2:
-                Nico = "benutzt diesen Zauberspruch [Leertaste]";
+                Nico = "werde ich euch zur Hilfe kommen";
                 break; 
             case 3:
-                Nico = "Dieser bringt euch wieder in die Mitte";
+                Nico = "indem ihr [Leertaste] verwendet";
                 break;
             case 4:
-                Nico = "Doch seid vorsichtig!";
+                Nico = "Damit bringe ich euch zurück in die Mitte";
                 break;
             case 5:
+                Nico = "Doch seid gewarnt";
+                break;
+                case 6:
+                    Nico = "Sobald ihr mich ruft, verschwindet die Hälfte einer euer Herzen";
+                    break;
+                
+            case 7:
                 EmmyS.down = 1;
                 EmmyS.up = 1;
                 TotoS.left = 1;
                 TotoS.right = 1;
-                Nico = "da dieser euch die H�lfte eines Herzen entnimmt";
+                Nico = "Also seid vorsichtig mit euren Wünschen";
                 break;
-            case 6:
+            case 8:
                 Nico = "";
                 story.SetActive(false);
                 Nicogeist.SetActive(false);

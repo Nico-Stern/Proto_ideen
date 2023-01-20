@@ -20,6 +20,10 @@ TagManager:
   - HRechts
   - HLinks
   - Hinternis
+  - DiaL
+  - DiaR
+  - DiaU
+  - DiaD
   layers:
   - Default
   - TransparentFX

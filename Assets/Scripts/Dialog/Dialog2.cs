@@ -124,74 +124,78 @@ public class Dialog2 : MonoBehaviour
         switch (Klicks)
         {
             case 1:
-                Nico = "Was macht ihr Menschen hier!?";
+                Nico = "Menschen?";
                 break; 
             
             case 2:
-                Nico = "Eigentlich dürftet ihr hier gar nicht sein.";
+                Nico = "Aber wie kann dass nur sein?";
                 
                 break;
 
             case 3:
-                Nico = "Es ist viel zugefählich für euch";
+                Nico = "Schließlich dürftet ihr nicht hier sein!";
                 break;
 
             case 4:
-                Emmy = "Wir wollen auch hier gar nicht sein!";
+                Emmy = "...?";
                 Nico = "";
                 break;
 
             case 5:
-                Emmy = "Sonst bekommen wir ärger von unserer Mutter";
+                Emmy = "Kann es sein, dass wir kleiner geworden sind, Toto?";
                 break;
             
             case 6:
                 Emmy = "";
-                Nico = "Vergisst euer Mutter Problem!";
+               Toto = "Das kannst du doch gar nicht beurteilen";
                 break;
-                
             case 7:
-                Nico = "Schließlich scheint es so als...";
-                break;
-            
-            case 8:
-                Nico = "Könnte Toto sich nur mit den [<][>] Pfeiltasten bewegen";
+                Toto = "da du doch schon immer klein warst, Emmy!";
                 break;
                 
-            case 9:
-                Nico = "Während Emmy sich nur mit [W][S] bewegen kann!";
+            case 8:
+                Toto = "";
+                Nico = "Leider ist eure Größe nicht euer Hauptproblem";
                 break;
             
+            case 9:
+                Nico = " Schließlich scheint es so, als könnte Toto sich nur mit den [<]|[>] bewegen";
+                break;
+                
             case 10:
+                Nico = "während Emmy sich nur mit [W]|[S] bewegen kann!";
+                break;
+            
+            case 11:
                 Nico = "";
                 Emmy = "...?";
                 Toto = "...?";
                 break;
             
-            case 11:
+            case 12:
                 Toto = "";
                 Emmy = "";
-                Nico = "Ihr wurdet verflucht!!!";
-                break;
-            
-            case 12:
-                Nico = "Toto kann sich nur nach links und rechts bewegen";
+                Nico = "Eure Bewegung ist eingeschränkt";
                 break;
             
             case 13:
-                Nico = "Bei Emmy ist es anders";
+                Nico = "Toto kann sich nur nach links und rechts bewegen";
                 break;
             
             case 14:
-                Nico = "Emmy kann sich nur nach oben und unten bewegen";
+                Nico = "Bei Emmy ist es anders";
                 break;
             
             case 15:
-                Nico = "probiert es mal aus";
-                
+                Nico = "da sie sich nur nach oben und unten bewegen kann";
                 break;
             
             case 16:
+                Nico = "Probiert es aus!";
+                
+                break;
+            
+            case 17:
                 Nico = "";
                 Story.SetActive(false);
                 Blackscreen.SetActive(false);

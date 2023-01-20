@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class moveToto : MonoBehaviour
 {
@@ -16,13 +17,16 @@ public class moveToto : MonoBehaviour
     public int Oben;
     public int Unten;
     public moveEmmy Emmy;
+    public TotoDia TD;
     public int left = -1;
     public int right = -1;
     public Tutorial tut;
+    public Text DialogToto;
+    public string Toto;
 
     private void Start()
     {
-        
+        Toto = "";
     }
     public void reset()
     {
@@ -31,6 +35,7 @@ public class moveToto : MonoBehaviour
     }
     public void Update()
     {
+        DialogToto.text = Toto;
         Vector2 positionV = transform.position;
         positionV.y = Mathf.Clamp(positionV.y, untereGrenze, obereGrenze);
         transform.position = positionV;
@@ -46,7 +51,7 @@ public class moveToto : MonoBehaviour
             Vector3 positionl = Vector3.left;
             transform.Translate(positionl);
             left++;
-            
+            TD.Left();
 
         }
         if ((Input.GetKeyDown(KeyCode.RightArrow) && right !=0 && HR == 0 && Emmy.HR==0 && Emmy.Rechts==1) || ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && Emmy.Rechts ==0 && Emmy.HR ==0 && HR == 0)) ||((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts ==0 && Emmy.HR ==1 && HR == 0)))
@@ -54,19 +59,21 @@ public class moveToto : MonoBehaviour
             Vector3 positionr = Vector3.right;
             transform.Translate(positionr);
             right++;
-            
+            TD.Right();
 
         }
         if (Input.GetKeyDown(KeyCode.W) && Unten == 1 && HO == 0)
         {
             Vector3 positionw = Vector3.up;
             transform.Translate(positionw);
+            TD.Up();
         }
 
         if (Input.GetKeyDown(KeyCode.S) && Oben == 1 && HU == 0)
         {
             Vector3 positionS = Vector3.down;
             transform.Translate(positionS);
+            TD.Down();
         }
         
 
@@ -99,6 +106,16 @@ public class moveToto : MonoBehaviour
             HR = 1;
             
         }
+
+        if (collision.gameObject.CompareTag("DiaU"))
+        {
+            Toto = "Ich stecke fest";
+        }
+
+        if (collision.gameObject.CompareTag("DiaD"))
+        {
+            Toto = "Ich stecke fest";
+        }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -123,6 +140,15 @@ public class moveToto : MonoBehaviour
         {
             HR = 0;
            
+        }
+        if (collision.gameObject.CompareTag("DiaU"))
+        {
+            Toto = "";
+        }
+
+        if (collision.gameObject.CompareTag("DiaD"))
+        {
+            Toto = "";
         }
     }
     

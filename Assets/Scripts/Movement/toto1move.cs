@@ -15,6 +15,7 @@ public class toto1move : MonoBehaviour
     public int Oben;
     public int Unten;
     public Emmy1move Emmy;
+    public TotoDia TD;
     public int left = -1;
     public int right = -1;
     
@@ -45,7 +46,7 @@ public class toto1move : MonoBehaviour
         {
             Vector3 positionl = Vector3.left;
             transform.Translate(positionl);
-            
+            TD.Left();
             
 
         }
@@ -53,7 +54,7 @@ public class toto1move : MonoBehaviour
         {
             Vector3 positionr = Vector3.right;
             transform.Translate(positionr);
-            
+            TD.Right();
             
 
         }
@@ -61,12 +62,14 @@ public class toto1move : MonoBehaviour
         {
             Vector3 positionw = Vector3.up;
             transform.Translate(positionw);
+            TD.Up();
         }
 
         if (Input.GetKeyDown(KeyCode.S) && Oben == 1 && HU == 0)
         {
             Vector3 positionS = Vector3.down;
             transform.Translate(positionS);
+            TD.Down();
         }
 
 
