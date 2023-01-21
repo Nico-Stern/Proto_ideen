@@ -6,6 +6,10 @@ using UnityEngine;
 public class DruckInfo : MonoBehaviour
 {
     public DruckNormal Dnormal;
+    public float xn = 0f;
+    public float yn = 0f;
+    public float x = 0f;
+    public float y = 0f;
 
     public void Start()
     {
@@ -16,12 +20,12 @@ public class DruckInfo : MonoBehaviour
     {
         if (Dnormal.Triggernormal >= 1)
         {
-            //print("da");
+            transform.position = new Vector3(x, y);
         }
 
         if (Dnormal.Triggernormal == 0)
         {
-            //print("raus");
+            transform.position = new Vector3(xn, yn);
         }
     }
 }

@@ -13,7 +13,7 @@ public class DruckNormal : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") ||collision.gameObject.CompareTag("Kiste"))
+        if (collision.gameObject.CompareTag("Emmy") || (collision.gameObject.CompareTag("Toto") || collision.gameObject.CompareTag("Kiste")))
         {           
             Triggernormal += 1;
             print(Triggernormal);
@@ -22,7 +22,7 @@ public class DruckNormal : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") ||collision.gameObject.CompareTag("Kiste") )
+        if (collision.gameObject.CompareTag("Emmy") || (collision.gameObject.CompareTag("Toto") || collision.gameObject.CompareTag("Kiste") ))
         {           
             Triggernormal -= 1;
             print(Triggernormal);

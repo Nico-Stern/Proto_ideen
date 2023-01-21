@@ -21,6 +21,11 @@ public class Emmy1move : MonoBehaviour
     public int down = -1;
     public Text DialogEmmy;
     public string Emmy;
+    public float vector = 107f;
+
+    public float vertical;
+    public float horizontal;
+    public float speed = 5f;
 
 
     private void Start()
@@ -36,6 +41,10 @@ public class Emmy1move : MonoBehaviour
     }
     public void Update()
     {
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+
         DialogEmmy.text = Emmy;
         Vector2 positionV = transform.position;
         positionV.y = Mathf.Clamp(positionV.y, untereGrenze, obereGrenze);
@@ -49,8 +58,11 @@ public class Emmy1move : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) && up != 0 && HO == 0 && Toto.HO == 0 && Toto.Unten == 1) || ((Input.GetKeyDown(KeyCode.W) && up != 0 && Toto.Unten == 0 && Toto.HO == 0 && HO == 0)) || ((Input.GetKeyDown(KeyCode.W) && Toto.Unten == 0 && Toto.HO == 1 && HO == 0)))
         {
-            Vector2 positionw = Vector2.up;
+             Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
+
+            
+
             ED.Up();
             
         }
