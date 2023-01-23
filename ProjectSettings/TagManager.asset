@@ -24,6 +24,10 @@ TagManager:
   - DiaR
   - DiaU
   - DiaD
+  - KO
+  - KU
+  - KR
+  - KL
   layers:
   - Default
   - TransparentFX
