@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 using UnityEngine.UI;
 
 public class Emmy1move : MonoBehaviour
@@ -26,10 +27,14 @@ public class Emmy1move : MonoBehaviour
     public float vertical;
     public float horizontal;
     public float speed = 5f;
+    private AudioSource Source;
+    public AudioClip Move;
+    public AudioClip sammeln;
 
 
     private void Start()
     {
+        Source = GetComponent<AudioSource>();
         up = 1;
         down = 1;
     }
@@ -38,6 +43,16 @@ public class Emmy1move : MonoBehaviour
     {
         Vector3 Resetposition = new Vector3(-2, 0, 0);
         transform.position = Resetposition;
+    }
+    public void soundMove()
+    {
+        Source.clip = Move;
+        Source.Play();
+    }
+    public void collect()
+    {
+        Source.clip = sammeln;
+        Source.Play();
     }
     public void Update()
     {
@@ -60,8 +75,8 @@ public class Emmy1move : MonoBehaviour
         {
              Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
+            soundMove();
 
-            
 
             ED.Up();
             
@@ -72,20 +87,23 @@ public class Emmy1move : MonoBehaviour
             Vector2 positionS = Vector2.down;
             transform.Translate(positionS);
             ED.Down();
-           
+            soundMove();
         }
         if (Rechts == 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0)
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
             ED.Right();
+            
         }
         if (Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
         {
             Vector2 positionr = Vector2.left;
             transform.Translate(positionr);
             ED.Left();
+            
         }
+
 
 
 
@@ -128,6 +146,10 @@ public class Emmy1move : MonoBehaviour
         if ((collision.gameObject.CompareTag("DiaR")))
         {
             Emmy = ("Hier komme ich nicht mehr Raus");
+        }
+        if (collision.gameObject.CompareTag("Kristall"))
+        {
+            collect();
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

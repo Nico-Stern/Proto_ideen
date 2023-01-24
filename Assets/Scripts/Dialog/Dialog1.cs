@@ -17,12 +17,19 @@ public class Dialog1 : MonoBehaviour
     public string Toto;
     public static int Klicks = 0;
     public GameObject Herzen;
-    
+    private AudioSource Source;
+    public AudioClip talk;
+
 
     private void Start()
     {
         Klicks = 0;
-        
+        Source = GetComponent<AudioSource>();
+    }
+    public void sprechen()
+    {
+        Source.clip = talk;
+        Source.Play();
     }
 
     void Update()
@@ -37,22 +44,30 @@ public class Dialog1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Klicks += 1;
+            
         }
+        if (Input.GetKeyDown(KeyCode.Space) == true && Klicks <= 2){
+            sprechen();
+        }
+
             switch (Klicks)
         {
 
 
             case 1:
                 Toto = "...? ";
+                
                 break;
 
             case 2:
                 
                 Toto = "Wo sind denn wir gelandet?";
+               
                 break;
 
             case 3:
                 Toto = "";
+                
                 SceneManager.LoadScene("Lvl.1");
                 Herzen.SetActive(false);
                 

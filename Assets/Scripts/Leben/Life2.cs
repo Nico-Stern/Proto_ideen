@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 
 public class Life2 : MonoBehaviour
 {
@@ -10,8 +11,18 @@ public class Life2 : MonoBehaviour
     public EmmyDia ED;
     public int Lifepoint = 6;
     public Leben LZ;
-    
-   
+    private AudioSource Source;
+    public AudioClip LLose;
+
+    private void Start()
+    {
+        Source = GetComponent<AudioSource>();
+    }
+    public void LoseLife()
+    {
+        Source.clip = LLose;
+        Source.Play();
+    }
 
     public void Update()
     {
@@ -24,6 +35,7 @@ public class Life2 : MonoBehaviour
             ED.transform.position = new Vector3(700, 500);
             TD.transform.position = new Vector3(1200, 500);            
             print(Lifepoint);
+            LoseLife();
             
         }
     }

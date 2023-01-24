@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 using UnityEngine.UI;
 
 public class toto1move : MonoBehaviour
@@ -21,10 +22,14 @@ public class toto1move : MonoBehaviour
     public int right = -1;
     public Text DialogToto;
     public string Toto;
+    private AudioSource Source;
+    public AudioClip Move;
+    public AudioClip sammeln;
 
 
     private void Start()
     {
+        Source = GetComponent<AudioSource>();
         left = 1;
         right = 1;
     }
@@ -32,6 +37,16 @@ public class toto1move : MonoBehaviour
     {
         Vector3 Resetposition = new Vector3(2, 0, 0);
         transform.position = Resetposition;
+    }
+    public void soundMove()
+    {
+        Source.clip = Move;
+        Source.Play();
+    }
+    public void collect()
+    {
+        Source.clip = sammeln;
+        Source.Play();
     }
     public void Update()
     {
@@ -51,7 +66,7 @@ public class toto1move : MonoBehaviour
             Vector3 positionl = Vector3.left;
             transform.Translate(positionl);
             TD.Left();
-            
+            soundMove();
 
         }
         if ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && HR == 0 && Emmy.HR == 0 && Emmy.Rechts == 1) || ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && Emmy.Rechts == 0 && Emmy.HR == 0 && HR == 0)) || ((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts == 0 && Emmy.HR == 1 && HR == 0)))
@@ -59,7 +74,7 @@ public class toto1move : MonoBehaviour
             Vector3 positionr = Vector3.right;
             transform.Translate(positionr);
             TD.Right();
-            
+            soundMove();
 
         }
         if (Input.GetKeyDown(KeyCode.W) && Unten == 1 && HO == 0)
@@ -67,6 +82,7 @@ public class toto1move : MonoBehaviour
             Vector3 positionw = Vector3.up;
             transform.Translate(positionw);
             TD.Up();
+            
         }
 
         if (Input.GetKeyDown(KeyCode.S) && Oben == 1 && HU == 0)
@@ -74,6 +90,7 @@ public class toto1move : MonoBehaviour
             Vector3 positionS = Vector3.down;
             transform.Translate(positionS);
             TD.Down();
+            
         }
 
 
@@ -114,6 +131,11 @@ public class toto1move : MonoBehaviour
         if (collision.gameObject.CompareTag("DiaD"))
         {
             Toto = "Ich stecke fest";
+        }
+
+        if (collision.gameObject.CompareTag("Kristall"))
+        {
+            collect();
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

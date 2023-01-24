@@ -24,9 +24,13 @@ public class moveEmmy : MonoBehaviour
     public Tutorial tut;
     public Text DialogEmmy;
     public string Emmy;
+    private AudioSource Source;
+    public AudioClip Move;
+    public AudioClip sammeln;
 
     private void Start()
     {
+        Source = GetComponent<AudioSource>();
         Emmy = "";
     }
 
@@ -34,6 +38,16 @@ public class moveEmmy : MonoBehaviour
     {
         Vector3 Resetposition = new Vector3(-2, 0, 0);
         transform.position = Resetposition;
+    }
+    public void soundMove()
+    {
+        Source.clip = Move;
+        Source.Play();
+    }
+    public void collect()
+    {
+        Source.clip = sammeln;
+        Source.Play();
     }
     public void Update()
     {
@@ -54,6 +68,7 @@ public class moveEmmy : MonoBehaviour
             transform.Translate(positionw);
             ++up;
            ED.Up();
+            soundMove();
         }
 
         if ((Input.GetKeyDown(KeyCode.S) && down != 0 && HU == 0 && Toto.HU==0 && Toto.Oben==1)|| ((Input.GetKeyDown(KeyCode.S) && down != 0 && Toto.Oben ==0 && Toto.HU ==0 && HU == 0)) ||((Input.GetKeyDown(KeyCode.S) && Toto.Oben ==0 && Toto.HU ==1 && HU == 0)))
@@ -62,18 +77,21 @@ public class moveEmmy : MonoBehaviour
             transform.Translate(positionS);
             down++;
             ED.Down();
+            soundMove();
         }
         if(Rechts== 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0) 
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
             ED.Right();
+            
         }
         if (Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
         {
             Vector2 positionr = Vector2.left;
             transform.Translate(positionr);
             ED.Left();
+            
         }
         if ((Input.GetKeyDown(KeyCode.LeftArrow) && tut.tap == 6 ))
         {
@@ -122,9 +140,12 @@ public class moveEmmy : MonoBehaviour
         {
             Emmy = ("Hier komme ich nicht mehr Raus");
         }
-        
-            
-        
+        if (collision.gameObject.CompareTag("Kristall"))
+        {
+            collect();
+        }
+
+
     }
     public void OnTriggerExit2D(Collider2D collision)
     {

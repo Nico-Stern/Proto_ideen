@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 using UnityEngine.UI;
 
 public class Life : MonoBehaviour
@@ -13,13 +14,23 @@ public class Life : MonoBehaviour
     public GameObject ED;
     public int Lifepoint = 6;
     public Leben AL;
+    private AudioSource Source;
+    public AudioClip LLose;
 
+    private void Start()
+    {
+        Source = GetComponent<AudioSource>();
+    }
+    public void LoseLife()
+    {
+        Source.clip = LLose;
+        Source.Play();
+    }
 
     public void Update()
     {
         Lifepoint = Leben.Lebenanzahl;
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-            
+        if (Input.GetKeyDown(KeyCode.Space) == true)            
         {
             Leben.Lebenanzahl--;
            
@@ -28,7 +39,7 @@ public class Life : MonoBehaviour
             print(Lifepoint);
             totom.reset();
             emmym.reset();
-            
+            LoseLife();
 
         }
     }

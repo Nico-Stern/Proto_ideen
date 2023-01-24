@@ -48,14 +48,16 @@ public class Dialog2 : MonoBehaviour
     public GameObject Story;
     public moveEmmy EmmyS;
     public moveToto TotoS;
-    
-    
+    private AudioSource Source;
+    public AudioClip talk;
+
+
 
 
 
     private void Start()
     {
-        
+        Source = GetComponent<AudioSource>();
         Anzeige.SetActive(false);
         t2.SetActive(false);
         tutorial.SetActive(false);
@@ -74,12 +76,17 @@ public class Dialog2 : MonoBehaviour
         Links = "[<]";
         Rechts = "[>]";
         Geschichte = "[SPACE]";
+        sprechen();
     }
 
- 
-    
-       
-    
+
+    public void sprechen()
+    {
+        Source.clip = talk;
+        Source.Play();
+    }
+
+
 
     public void Update()
     {
@@ -98,6 +105,7 @@ public class Dialog2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Klicks += 1;
+            sprechen();
         }
         if (Input.GetKeyDown(KeyCode.W) && Klicks>=16)
         {
