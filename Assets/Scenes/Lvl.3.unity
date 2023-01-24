@@ -4881,7 +4881,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 197eaa817f0db9141974177788a1381f, type: 3}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  m_Color: {r: 0.8980392, g: 0.8117647, b: 0.6745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7052,8 +7052,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780442698}
-  - component: {fileID: 780442700}
   - component: {fileID: 780442699}
+  - component: {fileID: 780442700}
   m_Layer: 0
   m_Name: Schlossopen
   m_TagString: Untagged
@@ -7101,7 +7101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 780442697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1927abb1a85aebc479826c2a8cb9c876, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b574963d301f314fb6f757a005f2c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zaehler: {fileID: 228460975}
@@ -17750,7 +17750,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 06ffc13f193b8754c85b05de045e25d1, type: 3}
-  m_Color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+  m_Color: {r: 0.8962264, g: 0.81087154, b: 0.6721698, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
