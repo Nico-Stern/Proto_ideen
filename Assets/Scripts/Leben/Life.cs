@@ -30,7 +30,7 @@ public class Life : MonoBehaviour
     public void Update()
     {
         Lifepoint = Leben.Lebenanzahl;
-        if (Input.GetKeyDown(KeyCode.Space) == true)            
+        if (Input.GetKeyDown(KeyCode.R) == true)            
         {
             Leben.Lebenanzahl--;
            

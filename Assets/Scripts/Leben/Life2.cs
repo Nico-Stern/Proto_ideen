@@ -27,7 +27,7 @@ public class Life2 : MonoBehaviour
     public void Update()
     {
     Lifepoint= Leben.Lebenanzahl;
-        if (Input.GetKeyDown(KeyCode.Space) == true)
+        if (Input.GetKeyDown(KeyCode.R) == true)
         {
             Leben.Lebenanzahl--;
             totom.reset();

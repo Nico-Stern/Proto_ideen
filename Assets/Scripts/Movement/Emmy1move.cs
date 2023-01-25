@@ -30,6 +30,7 @@ public class Emmy1move : MonoBehaviour
     private AudioSource Source;
     public AudioClip Move;
     public AudioClip sammeln;
+    public menu Menu;
 
 
     private void Start()
@@ -71,7 +72,7 @@ public class Emmy1move : MonoBehaviour
 
         Vector2 positionE = transform.position;
 
-        if ((Input.GetKeyDown(KeyCode.W) && up != 0 && HO == 0 && Toto.HO == 0 && Toto.Unten == 1) || ((Input.GetKeyDown(KeyCode.W) && up != 0 && Toto.Unten == 0 && Toto.HO == 0 && HO == 0)) || ((Input.GetKeyDown(KeyCode.W) && Toto.Unten == 0 && Toto.HO == 1 && HO == 0)))
+        if (Menu.Tabs !=1&& (Input.GetKeyDown(KeyCode.W) && up != 0 && HO == 0 && Toto.HO == 0 && Toto.Unten == 1) || Menu.Tabs !=1&&  ((Input.GetKeyDown(KeyCode.W) && up != 0 && Toto.Unten == 0 && Toto.HO == 0 && HO == 0)) || Menu.Tabs !=1&& ((Input.GetKeyDown(KeyCode.W) && Toto.Unten == 0 && Toto.HO == 1 && HO == 0)))
         {
              Vector2 positionw = Vector2.up;
             transform.Translate(positionw);
@@ -82,21 +83,21 @@ public class Emmy1move : MonoBehaviour
             
         }
 
-        if ((Input.GetKeyDown(KeyCode.S) && down != 0 && HU == 0 && Toto.HU == 0 && Toto.Oben == 1) || ((Input.GetKeyDown(KeyCode.S) && down != 0 && Toto.Oben == 0 && Toto.HU == 0 && HU == 0)) || ((Input.GetKeyDown(KeyCode.S) && Toto.Oben == 0 && Toto.HU == 1 && HU == 0)))
+        if (Menu.Tabs !=1&& (Input.GetKeyDown(KeyCode.S) && down != 0 && HU == 0 && Toto.HU == 0 && Toto.Oben == 1) || Menu.Tabs !=1&& ((Input.GetKeyDown(KeyCode.S) && down != 0 && Toto.Oben == 0 && Toto.HU == 0 && HU == 0)) || Menu.Tabs !=1&& ((Input.GetKeyDown(KeyCode.S) && Toto.Oben == 0 && Toto.HU == 1 && HU == 0)))
         {
             Vector2 positionS = Vector2.down;
             transform.Translate(positionS);
             ED.Down();
             soundMove();
         }
-        if (Rechts == 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0)
+        if (Menu.Tabs !=1&& Rechts == 1 && (Input.GetKeyDown(KeyCode.RightArrow)) && HR == 0)
         {
             Vector2 positionr = Vector2.right;
             transform.Translate(positionr);
             ED.Right();
             
         }
-        if (Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
+        if (Menu.Tabs !=1&& Links == 1 && (Input.GetKeyDown(KeyCode.LeftArrow)) && HL == 0)
         {
             Vector2 positionr = Vector2.left;
             transform.Translate(positionr);

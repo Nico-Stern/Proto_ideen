@@ -48,7 +48,7 @@ public class Tutorial2 : MonoBehaviour
                 Nico = "werde ich euch zur Hilfe kommen";
                 break; 
             case 3:
-                Nico = "indem ihr [Leertaste] verwendet";
+                Nico = "indem ihr [R] verwendet";
                 break;
             case 4:
                 Nico = "Damit bringe ich euch zurück in die Mitte";

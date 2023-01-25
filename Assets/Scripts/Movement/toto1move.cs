@@ -25,6 +25,7 @@ public class toto1move : MonoBehaviour
     private AudioSource Source;
     public AudioClip Move;
     public AudioClip sammeln;
+    public menu Menu;
 
 
     private void Start()
@@ -61,7 +62,7 @@ public class toto1move : MonoBehaviour
 
         Vector2 positionT = transform.position;
 
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && HL == 0 && Emmy.HL == 0 && Emmy.Links == 1) || ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links == 0 && Emmy.HL == 0 && HL == 0)) || ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links == 0 && Emmy.HL == 1 && HL == 0)))
+        if (Menu.Tabs !=1&& (Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && HL == 0 && Emmy.HL == 0 && Emmy.Links == 1) ||Menu.Tabs !=1&&  ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links == 0 && Emmy.HL == 0 && HL == 0)) ||Menu.Tabs !=1&&  ((Input.GetKeyDown(KeyCode.LeftArrow) && left != 0 && Emmy.Links == 0 && Emmy.HL == 1 && HL == 0)))
         {
             Vector3 positionl = Vector3.left;
             transform.Translate(positionl);
@@ -69,7 +70,7 @@ public class toto1move : MonoBehaviour
             soundMove();
 
         }
-        if ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && HR == 0 && Emmy.HR == 0 && Emmy.Rechts == 1) || ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && Emmy.Rechts == 0 && Emmy.HR == 0 && HR == 0)) || ((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts == 0 && Emmy.HR == 1 && HR == 0)))
+        if (Menu.Tabs !=1&& (Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && HR == 0 && Emmy.HR == 0 && Emmy.Rechts == 1) || Menu.Tabs !=1&& ((Input.GetKeyDown(KeyCode.RightArrow) && right != 0 && Emmy.Rechts == 0 && Emmy.HR == 0 && HR == 0)) ||Menu.Tabs !=1&&  ((Input.GetKeyDown(KeyCode.RightArrow) && Emmy.Rechts == 0 && Emmy.HR == 1 && HR == 0)))
         {
             Vector3 positionr = Vector3.right;
             transform.Translate(positionr);
@@ -77,7 +78,7 @@ public class toto1move : MonoBehaviour
             soundMove();
 
         }
-        if (Input.GetKeyDown(KeyCode.W) && Unten == 1 && HO == 0)
+        if (Menu.Tabs !=1&& Input.GetKeyDown(KeyCode.W) && Unten == 1 && HO == 0)
         {
             Vector3 positionw = Vector3.up;
             transform.Translate(positionw);
@@ -85,7 +86,7 @@ public class toto1move : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && Oben == 1 && HU == 0)
+        if (Menu.Tabs !=1&& Input.GetKeyDown(KeyCode.S) && Oben == 1 && HU == 0)
         {
             Vector3 positionS = Vector3.down;
             transform.Translate(positionS);
