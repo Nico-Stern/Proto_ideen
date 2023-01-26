@@ -126,12 +126,12 @@ public class toto1move : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("DiaU"))
         {
-            Toto = "Ich stecke fest";
+            Toto = ("Ich stecke Fest [R]");
         }
 
         if (collision.gameObject.CompareTag("DiaD"))
         {
-            Toto = "Ich stecke fest";
+            Toto = ("Ich stecke Fest [R]");
         }
 
         if (collision.gameObject.CompareTag("Kristall"))

@@ -134,12 +134,12 @@ public class moveEmmy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("DiaL"))
         {
-            Emmy = ("Hier komme ich nicht mehr Raus");
+            Emmy = ("Ich stecke Fest [R]");
         }
 
         if ((collision.gameObject.CompareTag("DiaR")))
         {
-            Emmy = ("Hier komme ich nicht mehr Raus");
+            Emmy = ("Ich stecke Fest [R]");
         }
         if (collision.gameObject.CompareTag("Kristall"))
         {

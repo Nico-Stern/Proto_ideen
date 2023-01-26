@@ -10,12 +10,7 @@ public class DruckInfo : MonoBehaviour
     public float yn = 0f;
     public float x = 0f;
     public float y = 0f;
-
-    public void Start()
-    {
-        
-    }
-
+    
    public void Update()
     {
         if (Dnormal.Triggernormal >= 1)
