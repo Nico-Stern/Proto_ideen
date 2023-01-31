@@ -12,13 +12,18 @@ public class TotoDrehn : MonoBehaviour
 
             Quaternion Rotation = transform.rotation;
             Rotation.y = 180;
+            Rotation.x = 0;
+            Rotation.z = 0; 
             transform.rotation = Rotation;
+
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
 
             Quaternion Rotation = transform.rotation;
             Rotation.y = 0;
+            Rotation.x = 0;
+                Rotation.z = 0;
             transform.rotation = Rotation;
         }
     }

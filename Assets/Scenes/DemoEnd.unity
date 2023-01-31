@@ -480,6 +480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67571e9a5ed86b740a3cda056b251ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 0}
+  AufLebenResten: 6
 --- !u!4 &1915682480
 Transform:
   m_ObjectHideFlags: 0
