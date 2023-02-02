@@ -523,6 +523,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2007369577, guid: 9d1282ca08d17814982bd282448648bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 2946894489514716652, guid: 9d1282ca08d17814982bd282448648bb, type: 3}
       propertyPath: m_Name
       value: Menu

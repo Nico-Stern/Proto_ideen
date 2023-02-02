@@ -15,12 +15,12 @@ public class DruckInfo : MonoBehaviour
     {
         if (Dnormal.Triggernormal >= 1)
         {
-            transform.position = new Vector3(x, y);
+            transform.position = new Vector3(x, y,0.8f);
         }
 
         if (Dnormal.Triggernormal == 0)
         {
-            transform.position = new Vector3(xn, yn);
+            transform.position = new Vector3(xn, yn,0.8f);
         }
     }
 }

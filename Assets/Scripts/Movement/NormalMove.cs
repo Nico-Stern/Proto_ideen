@@ -11,16 +11,8 @@ public class NormalMove : MonoBehaviour
     
     void Update()
     {
-        
         horizontal = Input.GetAxisRaw("Horizontal");
         Vector2 movement = horizontal * Vector2.right * runspeed * Time.deltaTime;
         transform.Translate(movement);
-
-        
-
-
-
-
-
     }
 }
